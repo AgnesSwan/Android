@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String API_URL = "http://api.icndb.com/jokes/random";
+    private String API_URL = "https://api.icndb.com/jokes/random";
     Button btnJoke;
     TextView txtJoke;
 
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     protected String doInBackground(String... params) {
                         Helper helper = new Helper();
-                        Object result = helper.getHTTPData(API_URL);
-                        ChuckNorris chuckNorris = new Gson().fromJson((JsonElement) result, ChuckNorris.class);
+                        String result = helper.getHTTPData(API_URL);
+                        ChuckNorris chuckNorris = new Gson().fromJson(result, ChuckNorris.class);
                        return chuckNorris.getValue().joke;
 //                        return "Hello";
                     }
