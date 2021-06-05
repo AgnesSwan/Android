@@ -4,26 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnJoke"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
-        android:text="@string/button"
+        android:layout_width="151dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:text="Today's quote"
+        app:backgroundTint="#37647A"
+        app:iconTint="#37647A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtJoke" />
 
     <TextView
         android:id="@+id/txtJoke"
-        android:layout_width="135dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/textview"
+        android:layout_width="268dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="84dp"
+        android:height="20dp"
+        android:text="Chuck Norris says..."
+        android:layout_gravity="center_horizontal|center"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="347dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/chuck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
